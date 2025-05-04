@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class UserModel {
 
-    public String saveUsers(UserDto userDto) throws ClassNotFoundException, SQLException {
+    public static String saveUsers(UserDto userDto) throws ClassNotFoundException, SQLException {
 
         return CrudUtil.execute(
                 "INSERT INTO user VALUES (?,?,?,?,?,?)",
@@ -79,7 +79,7 @@ public class UserModel {
         return userDto;
     }
 
-    public String getNextCustomerId() throws SQLException, ClassNotFoundException {
+    public static String getNextUserId() throws SQLException, ClassNotFoundException {
 
         ResultSet resultSet = CrudUtil.execute("SELECT user_id FROM user ORDER BY user_id DESC LIMIT 1");
         String tableCharacter = "U"; // Use any character Ex:- customer table for C, item table for I

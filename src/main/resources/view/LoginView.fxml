@@ -14,16 +14,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginAnc" prefHeight="1000.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalProject.controller.LoginController">
+<AnchorPane fx:id="loginAnc" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.finalProject.controller.LoginController">
     <children>
         <VBox layoutX="154.0" layoutY="268.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff; visibility: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <StackPane prefHeight="150.0" prefWidth="200.0">
                     <children>
-                        <ImageView fitHeight="628.0" fitWidth="602.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+                        <ImageView fitHeight="243.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
                             <image>
-                                <Image url="@../images/branch.jpg" />
+                                <Image url="@../images/OIP.jpeg" />
                             </image>
+                     <StackPane.margin>
+                        <Insets left="11.0" top="15.0" />
+                     </StackPane.margin>
                         </ImageView>
                     </children>
                 </StackPane>
@@ -33,23 +36,23 @@
                             <children>
                                 <HBox prefHeight="57.0" prefWidth="800.0">
                                     <children>
-                                        <StackPane prefHeight="150.0" prefWidth="200.0">
-                                            <children>
-                                                <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_RIGHT">
-                                                    <image>
-                                                        <Image url="@../images/mdi_fire.jpg" />
-                                                    </image>
-                                                    <StackPane.margin>
-                                                        <Insets right="10.0" top="10.0" />
-                                                    </StackPane.margin>
-                                                </ImageView>
-                                            </children>
-                                        </StackPane>
-                                        <Label text="Login">
+                                        <StackPane prefHeight="150.0" prefWidth="200.0" />
+                                        <Label prefHeight="54.0" prefWidth="112.0" text="  Login">
                                             <font>
                                                 <Font name="Poppins Bold" size="36.0" />
                                             </font>
+                                 <HBox.margin>
+                                    <Insets left="76.0" />
+                                 </HBox.margin>
                                         </Label>
+                                          <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../images/mdi_fire.jpg" />
+                                              </image>
+                                 <HBox.margin>
+                                    <Insets top="9.0" />
+                                 </HBox.margin>
+                                          </ImageView>
                                     </children>
                                     <VBox.margin>
                                         <Insets left="30.0" />
@@ -61,13 +64,16 @@
                                             <font>
                                                 <Font name="Poppins Bold" size="16.0" />
                                             </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
                                         </Label>
-                                        <TextField minHeight="-Infinity" prefHeight="45.0" promptText="grandmaster12" style="-fx-border-color: #000000; -fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                                        <TextField fx:id="userNameField" minHeight="-Infinity" prefHeight="45.0" promptText="user123" style="-fx-border-color: #000000; -fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-width: 2px;">
                                             <font>
                                                 <Font name="Poppins Regular" size="16.0" />
                                             </font>
                                             <VBox.margin>
-                                                <Insets top="7.0" />
+                                                <Insets left="-5.0" top="5.0" />
                                             </VBox.margin>
                                         </TextField>
                                     </children>
@@ -81,13 +87,16 @@
                                             <font>
                                                 <Font name="Poppins Bold" size="16.0" />
                                             </font>
+                                 <VBox.margin>
+                                    <Insets top="4.0" />
+                                 </VBox.margin>
                                         </Label>
-                                        <PasswordField prefHeight="45.0" promptText="john@123" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-width: 2px;">
+                                        <PasswordField fx:id="passwordField" prefHeight="45.0" promptText="************" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-width: 2px;">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
                                             <VBox.margin>
-                                                <Insets top="7.0" />
+                                                <Insets left="-5.0" top="7.0" />
                                             </VBox.margin>
                                         </PasswordField>
                                     </children>
@@ -97,7 +106,7 @@
                                 </VBox>
                                 <VBox prefHeight="162.0" prefWidth="428.0">
                                     <children>
-                                        <Button maxWidth="800.0" mnemonicParsing="false" onAction="#visitDashboard" prefHeight="41.0" prefWidth="428.0" style="-fx-background-color: #212529; -fx-border-radius: 20px; -fx-background-radius: 20px;" text="🔥 Login" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <Button maxWidth="800.0" mnemonicParsing="false" onAction="#visitDashboardOnAction" prefHeight="41.0" prefWidth="428.0" style="-fx-background-color: #212529; -fx-border-radius: 20px; -fx-background-radius: 20px;" text="🔥 Login" textFill="WHITE" VBox.vgrow="ALWAYS">
                                             <font>
                                                 <Font name="System Bold" size="20.0" />
                                             </font>
@@ -108,7 +117,7 @@
                                                 <Cursor fx:constant="HAND" />
                                             </cursor>
                                         </Button>
-                                        <Button maxWidth="800.0" mnemonicParsing="false" onAction="#visitSignUpPage" prefHeight="41.0" prefWidth="428.0" style="-fx-background-color: #ffffff; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: #000000; -fx-border-width: 2px;" text="Sign Up" VBox.vgrow="ALWAYS">
+                                        <Button maxWidth="800.0" mnemonicParsing="false" onAction="#visitSignUpPageOnAction" prefHeight="41.0" prefWidth="428.0" style="-fx-background-color: #ffffff; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: #000000; -fx-border-width: 2px;" text="Sign Up" VBox.vgrow="ALWAYS">
                                             <font>
                                                 <Font name="System Bold" size="20.0" />
                                             </font>
@@ -129,35 +138,20 @@
                                 <Insets />
                             </HBox.margin>
                         </VBox>
-                        <StackPane alignment="TOP_RIGHT" prefHeight="150.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
-                            <children>
-                                <ImageView fitHeight="337.0" fitWidth="698.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../images/29222687_2205_w048_n004_114b_p1_114%201.jpg" />
-                                    </image>
-                                    <StackPane.margin>
-                                        <Insets right="102.0" />
-                                    </StackPane.margin>
-                                </ImageView>
-                            </children>
-                            <HBox.margin>
-                                <Insets top="75.0" />
-                            </HBox.margin>
-                        </StackPane>
+                  <ImageView fitHeight="385.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cover photo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" top="50.0" />
+                     </HBox.margin>
+                  </ImageView>
                     </children>
                     <VBox.margin>
                         <Insets top="-90.0" />
                     </VBox.margin>
                 </HBox>
-                <StackPane prefHeight="150.0" prefWidth="200.0">
-                    <children>
-                        <ImageView fitHeight="404.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" StackPane.alignment="BOTTOM_RIGHT">
-                            <image>
-                                <Image url="@../images/Group.jpg" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </StackPane>
+                <StackPane prefHeight="150.0" prefWidth="200.0" />
             </children>
         </VBox>
     </children>

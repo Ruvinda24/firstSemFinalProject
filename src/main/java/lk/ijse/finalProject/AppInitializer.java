@@ -6,22 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
-
 public class AppInitializer extends Application {
+
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent parent = FXMLLoader.load(getClass().getResource("/view/"));
-
-        Scene scene = new Scene(parent);
-
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Dream Babycare Products ");
-        primaryStage.show();
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/LoginView.fxml"));
+        stage.setTitle("Dream Baby Care Products");
+        stage.setScene(new Scene(root));
+        stage.setResizable(true);
+        stage.show();
     }
 
     public static void main(String[] args) {
         launch(args);
-
     }
 }
