@@ -68,7 +68,7 @@
                                     <Insets top="6.0" />
                                  </VBox.margin>
                                         </Label>
-                                        <TextField fx:id="userNameField" minHeight="-Infinity" prefHeight="45.0" promptText="user123" style="-fx-border-color: #000000; -fx-background-color: #ffffff; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                                        <TextField fx:id="userNameField" minHeight="-Infinity" prefHeight="45.0" promptText="user123" style="-fx-border-color: #000000; -fx-background-color: #ffffff; -fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-width: 2px;">
                                             <font>
                                                 <Font name="Poppins Regular" size="16.0" />
                                             </font>
@@ -91,7 +91,7 @@
                                     <Insets top="4.0" />
                                  </VBox.margin>
                                         </Label>
-                                        <PasswordField fx:id="passwordField" prefHeight="45.0" promptText="************" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-width: 2px;">
+                                        <PasswordField fx:id="passwordField" prefHeight="45.0" promptText="************" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-border-width: 2px;">
                                             <font>
                                                 <Font size="16.0" />
                                             </font>
@@ -106,7 +106,7 @@
                                 </VBox>
                                 <VBox prefHeight="162.0" prefWidth="428.0">
                                     <children>
-                                        <Button maxWidth="800.0" mnemonicParsing="false" onAction="#visitDashboardOnAction" prefHeight="41.0" prefWidth="428.0" style="-fx-background-color: #212529; -fx-border-radius: 20px; -fx-background-radius: 20px;" text="🔥 Login" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <Button fx:id="loginButton" maxWidth="800.0" mnemonicParsing="false" onAction="#visitDashboardOnAction" prefHeight="41.0" prefWidth="428.0" style="-fx-background-color: #212529; -fx-border-radius: 20px; -fx-background-radius: 20px;" text="🔥 Login" textFill="WHITE" VBox.vgrow="ALWAYS">
                                             <font>
                                                 <Font name="System Bold" size="20.0" />
                                             </font>

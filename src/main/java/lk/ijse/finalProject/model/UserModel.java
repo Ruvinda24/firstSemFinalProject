@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class UserModel {
 
-    public static String saveUsers(UserDto userDto) throws ClassNotFoundException, SQLException {
+    public static boolean saveUsers(UserDto userDto) throws ClassNotFoundException, SQLException {
 
         return CrudUtil.execute(
                 "INSERT INTO user VALUES (?,?,?,?,?,?)",
@@ -24,7 +24,7 @@ public class UserModel {
                 userDto.getPhone_number()
         );
     }
-    public String updateUsers(UserDto userDto) throws ClassNotFoundException, SQLException{
+    public boolean updateUsers(UserDto userDto) throws ClassNotFoundException, SQLException{
 
         return CrudUtil.execute(
                 "UPDATE user SET user_name = ?, password = ?, email = ?, name = ?, phone_number = ?WHERE user_id= ?",
@@ -38,7 +38,7 @@ public class UserModel {
         );
     }
 
-    public String deleteUsers(String user_id) throws ClassNotFoundException, SQLException{
+    public boolean deleteUsers(String user_id) throws ClassNotFoundException, SQLException{
 
         return CrudUtil.execute("DELETE FROM user WHERE user_id = ?", user_id);
     }
