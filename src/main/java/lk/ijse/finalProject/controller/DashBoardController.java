@@ -1,5 +1,6 @@
 package lk.ijse.finalProject.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
@@ -9,6 +10,16 @@ public class DashBoardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
+    public void orderPlacementOnAction(ActionEvent actionEvent) {
+    }
+
+    public void productionPlacementOnAction(ActionEvent actionEvent) {
+    }
+
+    public void OverViewOnAction(ActionEvent actionEvent) {
 
     }
 }
